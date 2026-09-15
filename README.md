@@ -1,6 +1,6 @@
 # IT Support Portfolio
 
-Personal site for **Nguyen Vu Truong Phuc** — hands-on IT support and systems administration.
+Personal site for **Nguyen Vu Truong Phuc** — IT support, C# / .NET, and data analysis.
 
 Live files are static. Open `index.html` locally, or serve the folder with any web server / GitHub Pages.
 
@@ -13,7 +13,8 @@ A one-page runbook-style portfolio for Upwork and other international clients:
 - Network: MikroTik, VLAN, DHCP, NAT, firewall, DNS
 - Remote: SSH, Tailscale
 - Data: MySQL
-- Web: Nginx, domains, SSL/TLS, Git / GitHub
+- C# / .NET API deploy (Docker, reverse proxy)
+- SQL, Power BI, and Python analysis samples (public GitHub repos)
 
 The four **sample labs** are practice environments, not client jobs.
 
