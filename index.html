@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nguyen Vu Truong Phuc — hands-on IT support and systems administration for servers, networks, databases, and virtualized environments.">
-  <title>Nguyen Vu Truong Phuc · IT Support &amp; Systems Administration</title>
+  <meta name="description" content="Nguyen Vu Truong Phuc — IT support, Linux/Windows administration, C#/.NET, and data analysis (SQL, Power BI, Python).">
+  <title>Nguyen Vu Truong Phuc · IT Support, C# &amp; Data Analysis</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,8 +33,8 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#labs">Labs</a></li>
-        <li><a href="#approach">Approach</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -45,22 +45,23 @@
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow">
         <span class="status-dot" aria-hidden="true"></span>
-        Field operations · Systems · Networks
+        Field operations · Systems · Data
       </p>
       <h1 id="hero-title">Nguyen Vu Truong Phuc</h1>
-      <p class="role">IT Support &amp; Systems Administration</p>
+      <p class="role">IT Support · C# / .NET · Data Analysis</p>
       <p class="lede">
         Hands-on support for servers, networks, databases, and virtualized environments.
+        I also build with C# / .NET and analyze data in SQL, Power BI, and Python.
         I troubleshoot problems, configure systems correctly, and keep infrastructure stable and secure.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#labs">Read the labs</a>
+        <a class="btn btn-primary" href="#work">See the work</a>
         <a class="btn btn-ghost" href="https://github.com/pn849222-hub" rel="noopener noreferrer">GitHub</a>
       </div>
       <dl class="hero-meta">
         <div>
           <dt>Focus</dt>
-          <dd>Servers · Networks · Proxmox · MySQL</dd>
+          <dd>Linux · Docker · C# · SQL · Power BI</dd>
         </div>
         <div>
           <dt>Working style</dt>
@@ -86,8 +87,9 @@
         </p>
         <p>
           I like clearly defined technical problems — a server that will not boot, a VLAN
-          that cannot talk, a database that needs a clean restore, a new environment
-          built from scratch. I take time to understand the problem before I touch production.
+          that cannot talk, a database that needs a clean restore, a Docker stack that
+          will not start, or a dataset that needs a clear answer. I take time to understand
+          the problem before I touch production.
         </p>
         <aside class="callout" aria-label="How I work in short">
           <p class="callout-label">Operating note</p>
@@ -124,14 +126,81 @@
         </li>
         <li>
           <h3>Web delivery</h3>
-          <p>Nginx, domains, SSL/TLS, plus Git and GitHub deployment workflows.</p>
+          <p>Nginx, domains, SSL/TLS, Docker Compose, plus Git and GitHub deployment workflows.</p>
+        </li>
+        <li>
+          <h3>C# / .NET</h3>
+          <p>ASP.NET Core APIs, configuration, health checks, and deploying .NET apps behind a reverse proxy.</p>
+        </li>
+        <li>
+          <h3>Data analysis</h3>
+          <p>SQL queries, Power BI dashboards, and Python EDA — sales KPIs, trends, and clear findings.</p>
         </li>
       </ul>
     </section>
 
+    <section id="work" class="panel labs" aria-labelledby="work-title">
+      <header class="section-head">
+        <p class="kicker">03 / Work samples</p>
+        <h2 id="work-title">Public repos and a .NET deploy.</h2>
+        <p class="section-note">
+          These are my own projects. They are not Upwork client jobs.
+        </p>
+      </header>
+      <div class="lab-grid">
+        <article class="lab-card">
+          <p class="stamp">Public repo</p>
+          <p class="lab-id">DA-01</p>
+          <h3>SQL query portfolio</h3>
+          <p>Ten Superstore business queries in SQLite, from basic KPIs to a region × category matrix.</p>
+          <ul>
+            <li>Revenue, profit, discount effects</li>
+            <li>Basic → advanced SQL</li>
+            <li>Python + SQLite</li>
+          </ul>
+          <a class="card-link" href="https://github.com/pn849222-hub/sql-query-portfolio" rel="noopener noreferrer">github.com/pn849222-hub/sql-query-portfolio</a>
+        </article>
+        <article class="lab-card">
+          <p class="stamp">Public repo</p>
+          <p class="lab-id">DA-02</p>
+          <h3>Power BI sales dashboard</h3>
+          <p>Interactive Superstore dashboard: revenue, orders, profit, yearly growth, category and region.</p>
+          <ul>
+            <li>$2.30M sales · 9,994 orders</li>
+            <li>KPI cards, trend, breakdown</li>
+            <li>Power BI Desktop</li>
+          </ul>
+          <a class="card-link" href="https://github.com/pn849222-hub/powerbi-dashboard" rel="noopener noreferrer">github.com/pn849222-hub/powerbi-dashboard</a>
+        </article>
+        <article class="lab-card">
+          <p class="stamp">Public repo</p>
+          <p class="lab-id">DA-03</p>
+          <h3>Python sales EDA</h3>
+          <p>Exploratory analysis of Superstore: category profit, region mix, discount losses, YoY growth.</p>
+          <ul>
+            <li>pandas EDA</li>
+            <li>Clear written findings</li>
+            <li>Reproducible notebook/script</li>
+          </ul>
+          <a class="card-link" href="https://github.com/pn849222-hub/sales-data-analysis" rel="noopener noreferrer">github.com/pn849222-hub/sales-data-analysis</a>
+        </article>
+        <article class="lab-card">
+          <p class="stamp">Personal</p>
+          <p class="lab-id">CS-01</p>
+          <h3>C# / .NET API deploy</h3>
+          <p>ASP.NET Core API with PostgreSQL and Redis, Docker Compose, Nginx/Traefik reverse proxy, health checks, and GitHub deploy flow.</p>
+          <ul>
+            <li>C# · ASP.NET Core</li>
+            <li>Docker · HTTPS proxy</li>
+            <li>App, database, cache split</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section id="labs" class="panel labs" aria-labelledby="labs-title">
       <header class="section-head">
-        <p class="kicker">03 / Sample labs</p>
+        <p class="kicker">04 / Sample labs</p>
         <h2 id="labs-title">Practice environments, not client jobs.</h2>
         <p class="section-note">
           These are homelab runbooks I use to keep the skills sharp. They are labeled
@@ -188,18 +257,31 @@
 
     <section id="skills" class="panel" aria-labelledby="skills-title">
       <header class="section-head">
-        <p class="kicker">04 / Skills</p>
-        <h2 id="skills-title">Self-reported tags and working style.</h2>
+        <p class="kicker">05 / Skills</p>
+        <h2 id="skills-title">Skills I actually use.</h2>
       </header>
       <div class="skill-block">
-        <p class="skill-label">Technical</p>
+        <p class="skill-label">Infrastructure</p>
         <ul class="tags">
           <li>System Administration</li>
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>Nginx</li>
+          <li>DNS</li>
+          <li>SSL</li>
           <li>Computer Network</li>
-          <li>Network Engineering</li>
-          <li>Computing &amp; Networking</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <p class="skill-label">Build &amp; data</p>
+        <ul class="tags">
+          <li>C#</li>
+          <li>.NET</li>
+          <li>SQL</li>
+          <li>MySQL</li>
+          <li>Power BI</li>
+          <li>Python</li>
           <li>Database Management</li>
-          <li>Database</li>
         </ul>
       </div>
       <div class="skill-block">
@@ -213,7 +295,7 @@
 
     <section id="approach" class="panel" aria-labelledby="approach-title">
       <header class="section-head">
-        <p class="kicker">05 / Approach</p>
+        <p class="kicker">06 / Approach</p>
         <h2 id="approach-title">How a job actually proceeds.</h2>
       </header>
       <ol class="steps">
@@ -238,11 +320,11 @@
 
     <section id="contact" class="panel contact" aria-labelledby="contact-title">
       <header class="section-head">
-        <p class="kicker">06 / Contact</p>
+        <p class="kicker">07 / Contact</p>
         <h2 id="contact-title">Send the details of the problem.</h2>
       </header>
       <p class="contact-copy">
-        If you have an IT, server, network, virtualization, or database issue,
+        If you have an IT, server, network, Docker, C# / .NET, SQL, or Power BI issue,
         include what is broken, what you already tried, and any logs or screenshots.
       </p>
       <ul class="contact-links">
@@ -263,7 +345,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>Nguyen Vu Truong Phuc · IT Support &amp; Systems Administration</p>
+    <p>Nguyen Vu Truong Phuc · IT Support · C# / .NET · Data Analysis</p>
     <p>Sample labs are practice work, not client history.</p>
   </footer>
 

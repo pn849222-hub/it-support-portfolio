@@ -477,6 +477,21 @@ h2 {
   margin: 0.25rem 0;
 }
 
+.card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--copper);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.62rem;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  text-decoration: underline;
+}
+
 .skill-block + .skill-block {
   margin-top: 1.6rem;
 }
