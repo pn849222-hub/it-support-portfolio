@@ -542,7 +542,8 @@ h2 {
   list-style: none;
 }
 
-.contact-links a {
+.contact-links a,
+.copy-email {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -550,14 +551,44 @@ h2 {
   width: 100%;
   padding: 1.1rem 1.15rem;
   border: 1px solid var(--line-strong);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.contact-links a span:first-child {
+.contact-links a span:first-child,
+.copy-email span:first-child {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 0.68rem;
   color: var(--copper-hot);
+}
+
+.copy-email-value::after {
+  content: " · click to copy";
+  color: rgba(239, 228, 210, 0.45);
+  letter-spacing: 0.08em;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+}
+
+.copy-email.is-copied .copy-email-value::after {
+  content: " · copied";
+  color: var(--status);
+}
+
+.copy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .site-footer {
