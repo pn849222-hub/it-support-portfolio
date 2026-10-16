@@ -134,7 +134,7 @@
         </li>
         <li>
           <h3>Data analysis</h3>
-          <p>SQL queries, Power BI dashboards, and Python EDA — sales KPIs, trends, and clear findings.</p>
+          <p>Building a dataset where none exists — collecting, cleaning, and checking it — then SQL, Power BI, and Python to turn it into findings someone can act on.</p>
         </li>
       </ul>
     </section>
@@ -142,15 +142,39 @@
     <section id="work" class="panel labs" aria-labelledby="work-title">
       <header class="section-head">
         <p class="kicker">03 / Work samples</p>
-        <h2 id="work-title">Public repos and a .NET deploy.</h2>
+        <h2 id="work-title">Public repos, every one of them.</h2>
         <p class="section-note">
           These are my own projects. They are not Upwork client jobs.
         </p>
       </header>
       <div class="lab-grid">
-        <article class="lab-card">
+        <article class="lab-card featured">
           <p class="stamp">Public repo</p>
           <p class="lab-id">DA-01</p>
+          <h3>Vietnam IT job market</h3>
+          <p>Collected 672 live job postings from a job board's published sitemap, cleaned them, and analyzed what employers actually ask for. The dataset did not exist before this.</p>
+          <ul>
+            <li>73% of postings never name a salary</li>
+            <li>English outranks every technology</li>
+            <li>Python · SQLite · SQL · matplotlib</li>
+          </ul>
+          <a class="card-link" href="https://github.com/pn849222-hub/vn-it-job-market" rel="noopener noreferrer">github.com/pn849222-hub/vn-it-job-market</a>
+        </article>
+        <article class="lab-card featured">
+          <p class="stamp">Public repo</p>
+          <p class="lab-id">CS-01</p>
+          <h3>Job market REST API</h3>
+          <p>ASP.NET Core service over that dataset: filtering by city, skill and seniority, paging that reports what is left, split liveness and readiness probes, and Swagger docs.</p>
+          <ul>
+            <li>C# · ASP.NET Core · Dapper</li>
+            <li>Docker with a self-probing health check</li>
+            <li>11 xUnit tests, all passing</li>
+          </ul>
+          <a class="card-link" href="https://github.com/pn849222-hub/job-market-api" rel="noopener noreferrer">github.com/pn849222-hub/job-market-api</a>
+        </article>
+        <article class="lab-card">
+          <p class="stamp">Public repo</p>
+          <p class="lab-id">DA-02</p>
           <h3>SQL query portfolio</h3>
           <p>Ten Superstore business queries in SQLite, from basic KPIs to a region × category matrix.</p>
           <ul>
@@ -162,7 +186,7 @@
         </article>
         <article class="lab-card">
           <p class="stamp">Public repo</p>
-          <p class="lab-id">DA-02</p>
+          <p class="lab-id">DA-03</p>
           <h3>Power BI sales dashboard</h3>
           <p>Interactive Superstore dashboard: revenue, orders, profit, yearly growth, category and region.</p>
           <ul>
@@ -174,7 +198,7 @@
         </article>
         <article class="lab-card">
           <p class="stamp">Public repo</p>
-          <p class="lab-id">DA-03</p>
+          <p class="lab-id">DA-04</p>
           <h3>Python sales EDA</h3>
           <p>Exploratory analysis of Superstore: category profit, region mix, discount losses, YoY growth.</p>
           <ul>
@@ -183,17 +207,6 @@
             <li>Reproducible notebook/script</li>
           </ul>
           <a class="card-link" href="https://github.com/pn849222-hub/sales-data-analysis" rel="noopener noreferrer">github.com/pn849222-hub/sales-data-analysis</a>
-        </article>
-        <article class="lab-card">
-          <p class="stamp">Personal</p>
-          <p class="lab-id">CS-01</p>
-          <h3>C# / .NET API deploy</h3>
-          <p>ASP.NET Core API with PostgreSQL and Redis, Docker Compose, Nginx/Traefik reverse proxy, health checks, and GitHub deploy flow.</p>
-          <ul>
-            <li>C# · ASP.NET Core</li>
-            <li>Docker · HTTPS proxy</li>
-            <li>App, database, cache split</li>
-          </ul>
         </article>
         <article class="lab-card">
           <p class="stamp">Sample</p>

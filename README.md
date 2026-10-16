@@ -13,7 +13,8 @@ A one-page runbook-style portfolio for Upwork and other international clients:
 - Network: MikroTik, VLAN, DHCP, NAT, firewall, DNS
 - Remote: SSH, Tailscale
 - Data: MySQL
-- C# / .NET API deploy (Docker, reverse proxy)
+- C# / .NET REST API (ASP.NET Core, Dapper, Docker, xUnit)
+- Data collection and analysis: a self-built dataset of 672 live job postings
 - SQL, Power BI, and Python analysis samples (public GitHub repos)
 
 The four **sample labs** are practice environments, not client jobs.
