@@ -440,7 +440,7 @@ h2 {
   border-color: #d7c7ad;
 }
 
-/* The two newest builds lead the grid; a copper edge marks them without
+/* The lead builds open the grid; a copper edge marks them without
    introducing a colour the rest of the page does not already use. */
 .lab-card.featured {
   border-color: var(--copper);
@@ -492,6 +492,11 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.62rem;
+}
+
+.card-link + .card-link {
+  display: block;
+  margin-top: 0.45rem;
 }
 
 .card-link:hover,

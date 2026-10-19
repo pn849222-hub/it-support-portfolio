@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nguyen Vu Truong Phuc — IT support, Linux/Windows administration, C#/.NET, and data analysis (SQL, Power BI, Python).">
-  <title>Nguyen Vu Truong Phuc · IT Support, C# &amp; Data Analysis</title>
+  <meta name="description" content="Nguyen Vu Truong Phuc — backend and data developer: .NET APIs, Python data pipelines, SQL and Power BI. Co-founder of VANG LAI. Available for freelance work.">
+  <title>Nguyen Vu Truong Phuc · Backend &amp; Data Developer</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
   <header class="site-header">
     <p class="brand">
       <span class="brand-mark" aria-hidden="true"></span>
-      <span>Runbook / Ops</span>
+      <span>Backend / Data</span>
     </p>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="sr-only">Menu</span>
@@ -45,31 +45,32 @@
     <section class="hero" aria-labelledby="hero-title">
       <p class="eyebrow">
         <span class="status-dot" aria-hidden="true"></span>
-        Field operations · Systems · Data
+        Backend · Data · Systems
       </p>
       <h1 id="hero-title">Nguyen Vu Truong Phuc</h1>
-      <p class="role">IT Support · C# / .NET · Data Analysis</p>
+      <p class="role">Backend &amp; data developer · Co-founder, VANG LAI</p>
       <p class="lede">
-        Hands-on support for servers, networks, databases, and virtualized environments.
-        I also build with C# / .NET and analyze data in SQL, Power BI, and Python.
-        I troubleshoot problems, configure systems correctly, and keep infrastructure stable and secure.
+        I build .NET APIs and the Python data pipelines that feed them, and I run the Docker
+        stack underneath. I co-founded VANG LAI, a community sports platform, where I review
+        the code that ships and handle the security and correctness work.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">See the work</a>
+        <a class="btn btn-primary" href="https://pn849222-hub.github.io/vn-it-job-market/">Live case study</a>
+        <a class="btn btn-ghost" href="Nguyen-Vu-Truong-Phuc-CV.pdf">Download CV</a>
         <a class="btn btn-ghost" href="https://github.com/pn849222-hub" rel="noopener noreferrer">GitHub</a>
       </div>
       <dl class="hero-meta">
         <div>
           <dt>Focus</dt>
-          <dd>Linux · Docker · C# · SQL · Power BI</dd>
+          <dd>.NET · Python · SQL · Docker</dd>
         </div>
         <div>
-          <dt>Working style</dt>
-          <dd>Accountable · Detail oriented</dd>
+          <dt>Currently</dt>
+          <dd>Co-founder, VANG LAI</dd>
         </div>
         <div>
           <dt>Status</dt>
-          <dd>Open for defined technical work</dd>
+          <dd>Available for freelance work</dd>
         </div>
       </dl>
     </section>
@@ -77,19 +78,21 @@
     <section id="about" class="panel" aria-labelledby="about-title">
       <header class="section-head">
         <p class="kicker">01 / Profile</p>
-        <h2 id="about-title">A careful operator, not a ticket mill.</h2>
+        <h2 id="about-title">Backend and data, end to end.</h2>
       </header>
       <div class="about-grid">
         <p>
-          I provide hands-on IT support and system administration for servers, networks,
-          databases, and virtualized environments. The work is practical: find the fault,
-          change only what needs changing, test the result, and explain it clearly.
+          I am a second-year Computer Science student in Ho Chi Minh City and a co-founder of
+          VANG LAI, a community sports platform on .NET 10, PostgreSQL and Redis, with a Blazor
+          web app and a React Native mobile app. I review and merge the code that goes into the
+          main branch, and I ran its security and correctness pass: the admin token moved into
+          an HttpOnly cookie, auth guards on the admin, health checks that report the real failure.
         </p>
         <p>
-          I like clearly defined technical problems — a server that will not boot, a VLAN
-          that cannot talk, a database that needs a clean restore, a Docker stack that
-          will not start, or a dataset that needs a clear answer. I take time to understand
-          the problem before I touch production.
+          On my own I build data pipelines and the APIs that serve them. The part I care about is
+          the part tutorials skip: real data arrives broken, and the job is to notice. One of my
+          pipelines was silently dropping fifty jobs because an ID that looked unique was not.
+          Finding that mattered more than any chart I drew afterwards.
         </p>
         <aside class="callout" aria-label="How I work in short">
           <p class="callout-label">Operating note</p>
@@ -105,36 +108,36 @@
       </header>
       <ul class="cap-list">
         <li>
-          <h3>Servers</h3>
-          <p>Windows and Linux server setup and troubleshooting. Ubuntu administration and remote support.</p>
+          <h3>Backend APIs</h3>
+          <p>ASP.NET Core and Minimal APIs on .NET 10: endpoint design, filtering and paging, health probes, Swagger docs, tests.</p>
         </li>
         <li>
-          <h3>Virtualization</h3>
-          <p>Proxmox VE, virtual machine management, snapshots, and hardware-level troubleshooting.</p>
+          <h3>Data pipelines</h3>
+          <p>Python collection and cleaning: sitemaps and structured data, robots.txt-aware crawling, rate limits, resumable runs, data-quality checks.</p>
+        </li>
+        <li>
+          <h3>SQL &amp; databases</h3>
+          <p>PostgreSQL, SQLite and MySQL: schema design, analytical queries, backups and restores.</p>
+        </li>
+        <li>
+          <h3>Dashboards &amp; reports</h3>
+          <p>Power BI dashboards, matplotlib charts and automated PDF reports, with the findings written out in plain language.</p>
+        </li>
+        <li>
+          <h3>Code review &amp; hardening</h3>
+          <p>Reviewing pull requests and fixing what slips through: token storage, auth guards, race conditions, contrast for accessibility.</p>
+        </li>
+        <li>
+          <h3>Docker &amp; delivery</h3>
+          <p>Docker Compose, Nginx and Traefik, TLS, multi-stage images that run as non-root, Git and GitHub workflows.</p>
+        </li>
+        <li>
+          <h3>Servers &amp; virtualization</h3>
+          <p>Linux and Windows server setup, Ubuntu administration, Proxmox VE, snapshots, remote support over SSH and Tailscale.</p>
         </li>
         <li>
           <h3>Network</h3>
-          <p>MikroTik routers, managed switches, VLAN, DHCP, NAT, firewall, routing, DNS, and segmentation.</p>
-        </li>
-        <li>
-          <h3>Remote access</h3>
-          <p>SSH and Tailscale administration. Connectivity and remote access troubleshooting.</p>
-        </li>
-        <li>
-          <h3>Data</h3>
-          <p>MySQL / SQL setup, users, backups, restores, and day-to-day troubleshooting.</p>
-        </li>
-        <li>
-          <h3>Web delivery</h3>
-          <p>Nginx, domains, SSL/TLS, Docker Compose, plus Git and GitHub deployment workflows.</p>
-        </li>
-        <li>
-          <h3>C# / .NET</h3>
-          <p>ASP.NET Core APIs, configuration, health checks, and deploying .NET apps behind a reverse proxy.</p>
-        </li>
-        <li>
-          <h3>Data analysis</h3>
-          <p>Building a dataset where none exists — collecting, cleaning, and checking it — then SQL, Power BI, and Python to turn it into findings someone can act on.</p>
+          <p>MikroTik routers, managed switches, VLAN, DHCP, NAT, firewall, routing, DNS and segmentation.</p>
         </li>
       </ul>
     </section>
@@ -142,12 +145,24 @@
     <section id="work" class="panel labs" aria-labelledby="work-title">
       <header class="section-head">
         <p class="kicker">03 / Work samples</p>
-        <h2 id="work-title">Public repos, every one of them.</h2>
+        <h2 id="work-title">What I have built.</h2>
         <p class="section-note">
-          These are my own projects. They are not Upwork client jobs.
+          The public repos are my own work, written alone. VANG LAI is a product I co-founded; its code is private. None of these are client jobs.
         </p>
       </header>
       <div class="lab-grid">
+        <article class="lab-card featured">
+          <p class="stamp">Co-founder</p>
+          <p class="lab-id">PRD-01</p>
+          <h3>VANG LAI</h3>
+          <p>A community sports platform: sessions, registration, payments, tournaments and notifications across web, admin and mobile. I review and merge the code and ran the security and correctness pass.</p>
+          <ul>
+            <li>.NET 10 · PostgreSQL · Redis</li>
+            <li>Blazor Server · Expo / React Native</li>
+            <li>Docker Compose · Traefik</li>
+          </ul>
+          <span class="card-link">Private codebase</span>
+        </article>
         <article class="lab-card featured">
           <p class="stamp">Public repo</p>
           <p class="lab-id">DA-01</p>
@@ -158,6 +173,7 @@
             <li>English outranks every technology</li>
             <li>Python · SQLite · SQL · matplotlib</li>
           </ul>
+          <a class="card-link" href="https://pn849222-hub.github.io/vn-it-job-market/">Live case study →</a>
           <a class="card-link" href="https://github.com/pn849222-hub/vn-it-job-market" rel="noopener noreferrer">github.com/pn849222-hub/vn-it-job-market</a>
         </article>
         <article class="lab-card featured">
@@ -171,6 +187,18 @@
             <li>11 xUnit tests, all passing</li>
           </ul>
           <a class="card-link" href="https://github.com/pn849222-hub/job-market-api" rel="noopener noreferrer">github.com/pn849222-hub/job-market-api</a>
+        </article>
+        <article class="lab-card">
+          <p class="stamp">Public repo</p>
+          <p class="lab-id">DA-05</p>
+          <h3>Vietnam market brief</h3>
+          <p>Did five large HOSE stocks beat the VN30 ETF from 2024 to 2026? HOSE caps a session at ±7%, so the script stitches the dividend gaps the price feed leaves unadjusted.</p>
+          <ul>
+            <li>VCB, HPG, FPT, VNM, MWG vs FUEVFVND</li>
+            <li>Dividend-gap correction</li>
+            <li>Python · pandas · matplotlib</li>
+          </ul>
+          <a class="card-link" href="https://github.com/pn849222-hub/vietnam-market-brief" rel="noopener noreferrer">github.com/pn849222-hub/vietnam-market-brief</a>
         </article>
         <article class="lab-card">
           <p class="stamp">Public repo</p>
@@ -286,27 +314,39 @@
         <h2 id="skills-title">Skills I actually use.</h2>
       </header>
       <div class="skill-block">
-        <p class="skill-label">Infrastructure</p>
+        <p class="skill-label">Backend</p>
         <ul class="tags">
-          <li>System Administration</li>
-          <li>Linux</li>
-          <li>Docker</li>
-          <li>Nginx</li>
-          <li>DNS</li>
-          <li>SSL</li>
-          <li>Computer Network</li>
+          <li>C#</li>
+          <li>.NET 10</li>
+          <li>ASP.NET Core</li>
+          <li>EF Core</li>
+          <li>Dapper</li>
+          <li>REST APIs</li>
+          <li>Blazor</li>
         </ul>
       </div>
       <div class="skill-block">
-        <p class="skill-label">Build &amp; data</p>
+        <p class="skill-label">Data</p>
         <ul class="tags">
-          <li>C#</li>
-          <li>.NET</li>
-          <li>SQL</li>
-          <li>MySQL</li>
-          <li>Power BI</li>
           <li>Python</li>
-          <li>Database Management</li>
+          <li>pandas</li>
+          <li>SQL</li>
+          <li>PostgreSQL</li>
+          <li>SQLite</li>
+          <li>Redis</li>
+          <li>Power BI</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <p class="skill-label">Infrastructure</p>
+        <ul class="tags">
+          <li>Docker</li>
+          <li>Docker Compose</li>
+          <li>Nginx</li>
+          <li>Traefik</li>
+          <li>Linux</li>
+          <li>Proxmox VE</li>
+          <li>Networking</li>
         </ul>
       </div>
       <div class="skill-block">
@@ -346,13 +386,19 @@
     <section id="contact" class="panel contact" aria-labelledby="contact-title">
       <header class="section-head">
         <p class="kicker">07 / Contact</p>
-        <h2 id="contact-title">Send the details of the problem.</h2>
+        <h2 id="contact-title">Tell me what you need built.</h2>
       </header>
       <p class="contact-copy">
-        If you have an IT, server, network, Docker, C# / .NET, SQL, or Power BI issue,
-        include what is broken, what you already tried, and any logs or screenshots.
+        Send a short description: the data or API you need, what already exists, and when
+        you need it. Sample files, logs or screenshots help.
       </p>
       <ul class="contact-links">
+        <li>
+          <a href="Nguyen-Vu-Truong-Phuc-CV.pdf">
+            <span>CV</span>
+            <span>One page, PDF</span>
+          </a>
+        </li>
         <li>
           <a href="https://github.com/pn849222-hub" rel="noopener noreferrer">
             <span>GitHub</span>
@@ -371,7 +417,7 @@
   </main>
 
   <footer class="site-footer">
-    <p>Nguyen Vu Truong Phuc · IT Support · C# / .NET · Data Analysis</p>
+    <p>Nguyen Vu Truong Phuc · Backend &amp; Data · Co-founder, VANG LAI</p>
     <p>Sample labs are practice work, not client history.</p>
   </footer>
 
