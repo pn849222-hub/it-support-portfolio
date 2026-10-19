@@ -18,9 +18,7 @@ A one-page portfolio for freelance and international clients:
 
 The four **sample labs** are practice environments, not client jobs.
 
-## Edit before you share
 
-Contact email on the site is `pn849222@gmail.com`. Optional: add your Upwork profile URL next to the GitHub link.
 
 ## GitHub Pages
 
