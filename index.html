@@ -8,145 +8,213 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page">
-    <header class="intro">
-      <div>
-        <h1 lang="vi">Nguyễn Vũ Trường Phúc</h1>
-        <p>
-          Phúc, or Ben in English. I'm a second-year computer science student in Ho Chi Minh
-          City. I build .NET APIs and Python data pipelines, and I co-founded VANG LAI, a
-          platform for drop-in badminton.
-        </p>
-        <p class="links">
-          <a href="mailto:pn849222@gmail.com">Email</a>
-          <a href="https://github.com/pn849222-hub">GitHub</a>
-          <a href="Nguyen-Vu-Truong-Phuc-CV.pdf">CV (PDF)</a>
-        </p>
-      </div>
-      <img class="photo" src="assets/photo.webp" width="336" height="420" alt="Phúc">
-    </header>
+  <div class="progress" aria-hidden="true"></div>
 
-    <main>
-      <section class="evidence" aria-label="An example of my work">
-        <p>
-          When I collected 672 job postings from ITviec, every salary came labelled as US
-          dollars. 24 of them were really in Vietnamese dong:
-        </p>
-        <figure>
+  <header class="hero" data-scroll="leave">
+    <div class="wrap">
+      <div class="hero-text">
+        <nav class="top fade" aria-label="Links"><a href="#pipeline">Pipeline</a><a href="#work">Work</a><a href="Nguyen-Vu-Truong-Phuc-CV.pdf">CV</a><a href="https://github.com/pn849222-hub">GitHub</a></nav>
+        <h1 class="big" lang="vi">Phúc</h1>
+        <p class="full fade" lang="vi">Nguyễn Vũ Trường Phúc</p>
+        <p class="intro fade">Backend and data developer in Ho Chi Minh City. I build .NET APIs and Python data pipelines, and I co-founded VANG LAI.</p>
+        <div class="actions fade">
+          <a class="btn solid" href="mailto:pn849222@gmail.com">Email me</a>
+          <a class="btn" href="Nguyen-Vu-Truong-Phuc-CV.pdf">Download CV</a>
+        </div>
+      </div>
+      <figure class="portrait"><img src="assets/photo.webp" width="720" height="779" alt="Phúc"></figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="pipe" id="pipeline" aria-labelledby="pipe-title">
+      <div class="wrap pipe-head">
+        <h2 id="pipe-title">One job posting, through my pipeline</h2>
+        <p>A real posting, followed from the job board to the API. Keep scrolling.</p>
+      </div>
+      <div class="pipe-track" data-scroll="track">
+        <div class="pipe-stage">
+          <div class="wrap">
+            <ol class="steps" aria-hidden="true">
+              <li data-step="0"><span>1</span>Collect</li>
+              <li data-step=".2"><span>2</span>Catch</li>
+              <li data-step=".4"><span>3</span>Clean</li>
+              <li data-step=".6"><span>4</span>Store</li>
+              <li data-step=".8"><span>5</span>Serve</li>
+            </ol>
+            <div class="frames">
+              <article class="frame f1">
+                <div>
+                  <h3>Collect</h3>
+                  <p class="say">I read 672 job pages through the board's public sitemap, after checking robots.txt, one request every 1.5 seconds.</p>
+                  <p class="cap">The posting as the board shows it, with the company left out.</p>
+                </div>
+                <div>
+                  <div class="card">
+                    <p class="t">Junior FullStack Native AI Engineer</p>
+                    <p class="pay">14 – 16 million VND/month</p>
+                    <ul class="chips"><li>Hà Nội</li><li>Junior</li><li>AI</li><li>Generative AI</li><li>JavaScript</li><li>Node.js</li><li>Python</li><li>React</li></ul>
+                  </div>
+<pre class="log"><code>robots.txt   allowed
+sitemap      672 job pages
+delay        1.5 s between requests</code></pre>
+                </div>
+              </article>
+
+              <article class="frame f2">
+                <div>
+                  <h3>Catch</h3>
+                  <p class="say">Each page carries a JSON-LD block for search engines. This one says USD. Its own text says dong.</p>
+                  <p class="cap">24 of the 183 published salaries had the same problem.</p>
+                </div>
 <pre><code>"baseSalary": {
   "@type": "MonetaryAmount",
-  "currency": "<mark>USD</mark>",
+  "currency": "<mark class="m1">USD</mark>",
   "value": {
     "@type": "QuantitativeValue",
     "unitText": "MONTH",
-    "value": "<mark>14 – 16 million VND/month</mark>"
+    "value": "<mark class="m2">14 – 16 million VND/month</mark>"
   }
 }</code></pre>
-          <figcaption>One real posting, as the job board published it.</figcaption>
-        </figure>
-        <p>
-          Averaging those as dollars would have mixed 14 (million dong) with 1,500 (dollars).
-          My pipeline reads the currency from the text instead of trusting the label. That fix
-          and three others are in the
-          <a href="https://pn849222-hub.github.io/vn-it-job-market/">case study</a>.
-        </p>
-      </section>
+              </article>
 
-      <section class="work" aria-labelledby="built">
-        <h2 id="built">Things I've built</h2>
+              <article class="frame f3">
+                <div>
+                  <h3>Clean</h3>
+                  <p class="say">My pipeline reads the currency from the text and converts dong at 26,300 to the dollar.</p>
+                  <p class="cap">Read as dollars, this posting would have counted as $14 to $16 a month.</p>
+                </div>
+<pre><code># before
+currency         "USD"
+value            "14 – 16 million VND/month"
+<span class="reveal">
+# after
+salary_currency  <mark>"VND"</mark>
+salary_min_usd   <mark>532.32</mark>
+salary_max_usd   <mark>608.37</mark>
 
-        <article>
-          <h3>Vietnam IT job market</h3>
-          <figure>
-            <img src="assets/jobmarket-chart.webp" width="1290" height="870" loading="lazy" decoding="async"
-                 alt="Chart of advertised monthly salary by seniority, from about 200 dollars for interns to 2,065 to 3,341 dollars for lead roles.">
-          </figure>
-          <p>
-            I collected 672 live postings from 320 companies, cleaned them into SQLite and
-            asked what employers want. 73% of the postings don't say what they pay, and English
-            is requested more often than any programming language.
-          </p>
-          <p class="links-small">
-            <a href="https://pn849222-hub.github.io/vn-it-job-market/">Read the case study</a>
-            <a href="https://github.com/pn849222-hub/vn-it-job-market">Source code</a>
-          </p>
-        </article>
+# 14,000,000 / 26,300 = 532.32
+# 16,000,000 / 26,300 = 608.37</span></code></pre>
+              </article>
 
-        <article>
-          <h3>Job market API</h3>
-          <figure>
-            <img src="assets/api-swagger.webp" width="1440" height="1061" loading="lazy" decoding="async"
-                 alt="Swagger page of the Job Market API listing five endpoints: health, readiness, jobs, top skills and stats.">
-          </figure>
-          <p>
-            A small read-only REST API over that database, built with ASP.NET Core and Dapper.
-            It filters and pages results, has health checks and 11 tests, and runs in Docker as
-            a non-root user. The screenshot runs on demo data.
-          </p>
-          <p class="links-small">
-            <a href="https://github.com/pn849222-hub/job-market-api">Source code</a>
-          </p>
-        </article>
+              <article class="frame f4">
+                <div>
+                  <h3>Store</h3>
+                  <p class="say">Every posting becomes one row in SQLite, and every skill a row of its own.</p>
+                  <p class="cap">Five real rows of 672. Titles only, no company names.</p>
+                </div>
+                <div class="tbl">
+                  <table>
+                    <thead><tr><th>title</th><th>currency</th><th class="n">min_usd</th><th class="n">max_usd</th></tr></thead>
+                    <tbody>
+                      <tr><td>Senior IT Business Analyst</td><td>USD</td><td class="n">1000.00</td><td class="n">1300.00</td></tr>
+                      <tr><td>Intern Embedded Software Engineer</td><td>VND</td><td class="n">228.14</td><td class="n">228.14</td></tr>
+                      <tr class="ours"><td>Junior FullStack Native AI Engineer</td><td>VND</td><td class="n">532.32</td><td class="n">608.37</td></tr>
+                      <tr><td>Cloud Presales Engineer</td><td>VND</td><td class="n">950.57</td><td class="n">950.57</td></tr>
+                      <tr><td>Data Governance Expert</td><td>USD</td><td class="n">2000.00</td><td class="n">4000.00</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </article>
 
-        <article>
-          <h3>VANG LAI</h3>
-          <figure>
-            <img src="assets/vanglai-home.webp" width="1440" height="776" loading="lazy" decoding="async"
-                 alt="VANG LAI home page: a dark badminton court photo with the headline Vào sân. Đúng nhịp. and buttons to find a session today or create an account.">
-            <figcaption>The home page, running on my machine with demo data.</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/vanglai-tournaments.webp" width="1440" height="900" loading="lazy" decoding="async"
-                 alt="VANG LAI tournament list with filters for city, status and dates, and cards showing entry fees and how many players have registered.">
-            <figcaption>The tournament list, also on demo data.</figcaption>
-          </figure>
-          <p>
-            A platform for drop-in badminton: finding a session, signing up, paying and running
-            tournaments, on web and mobile. I co-founded it. I review code before it reaches the
-            main branch, and I did its security pass, for example moving the admin login token
-            into an HttpOnly cookie.
-          </p>
-          <p class="aside">The code is private.</p>
-        </article>
-      </section>
+              <article class="frame f5">
+                <div>
+                  <h3>Serve</h3>
+                  <p class="say">An ASP.NET Core API serves the rows, with filters, paging and health checks.</p>
+                  <p class="cap">The real response, trimmed: company, link and IDs left out.</p>
+                </div>
+                <div>
+<pre class="req"><code>GET /api/jobs
+      ?skill=generative%20ai
+      &amp;seniority=Junior
+      &amp;withSalaryOnly=true</code></pre>
+<pre class="res"><code>{
+  "total": 1,
+  "items": [{
+    "title": "Junior FullStack Native AI Engineer",
+    "city": "Hà Nội",
+    "seniority": "Junior",
+    "salaryMinUsd": <mark>532.32</mark>,
+    "salaryMaxUsd": <mark>608.37</mark>,
+    "skills": ["AI", "Generative AI", "JavaScript",
+               "Node.js", "Python", "React"]
+  }]
+}</code></pre>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="wrap after">Every number in the case study came out of this pipeline. <a href="https://pn849222-hub.github.io/vn-it-job-market/">Read the case study</a>.</p>
+    </section>
 
-      <section aria-labelledby="smaller">
-        <h2 id="smaller">Smaller projects</h2>
-        <ul class="more">
-          <li><a href="https://github.com/pn849222-hub/vietnam-market-brief">Vietnam market brief</a>: did five large HOSE stocks beat the VN30 ETF from 2024 to 2026?</li>
-          <li><a href="https://github.com/pn849222-hub/sql-query-portfolio">SQL query portfolio</a>: ten business questions answered in SQL.</li>
-          <li><a href="https://github.com/pn849222-hub/powerbi-dashboard">Power BI sales dashboard</a>: revenue, profit and growth across 9,994 retail orders.</li>
-          <li><a href="https://github.com/pn849222-hub/sales-data-analysis">Sales data analysis</a>: the same retail data, explored in Python.</li>
-          <li><a href="https://github.com/pn849222-hub/auto-report-generator">Automatic sales report</a>: a script that turns a CSV into a formatted PDF report.</li>
-          <li><a href="https://github.com/pn849222-hub/vietnam-stock-analysis">VN-Index 2020 to 2024</a>: price, volatility and trading volume.</li>
-          <li><a href="https://github.com/pn849222-hub/nginx-docker-ssl-sample">Nginx, Docker and HTTPS</a>: a practice setup that redirects HTTP to HTTPS.</li>
-        </ul>
-      </section>
+    <section class="gallery" id="work" data-scroll="track" data-rail aria-labelledby="built">
+      <div class="gallery-stage">
+        <div class="wrap"><h2 id="built">Things I've built</h2></div>
+        <div class="rail wrap">
+          <article class="panel">
+            <img src="assets/vanglai-home.webp" width="1440" height="776" alt="VANG LAI home page with the headline Vào sân. Đúng nhịp.">
+            <div>
+              <h3>VANG LAI</h3>
+              <p class="role">Co-founder</p>
+              <p>A platform for drop-in badminton: find a session, sign up, pay and play, on web and mobile. I review code before it reaches the main branch, and I did its security pass.</p>
+              <p class="cap">Running locally with demo data.</p>
+            </div>
+          </article>
+          <article class="panel">
+            <img src="assets/jobmarket-chart.webp" width="1290" height="870" alt="Chart of advertised monthly salary by seniority.">
+            <div>
+              <h3>Vietnam IT job market</h3>
+              <p class="role">Sole author</p>
+              <p>672 live postings from 320 companies, collected, cleaned into SQLite and analysed. 73% never say what they pay.</p>
+              <p><a href="https://pn849222-hub.github.io/vn-it-job-market/">Read the case study</a> &nbsp; <a href="https://github.com/pn849222-hub/vn-it-job-market">Source code</a></p>
+            </div>
+          </article>
+          <article class="panel">
+            <img src="assets/api-swagger.webp" width="1440" height="1061" alt="Swagger page of the Job Market API.">
+            <div>
+              <h3>Job market API</h3>
+              <p class="role">Sole author</p>
+              <p>A read-only REST API over that data: ASP.NET Core, Dapper, Docker, 11 tests.</p>
+              <p><a href="https://github.com/pn849222-hub/job-market-api">Source code</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="more wrap" aria-labelledby="smaller">
+      <h2 id="smaller">Smaller projects</h2>
+      <ul class="list">
+        <li><a href="https://github.com/pn849222-hub/vietnam-market-brief">Vietnam market brief</a><span>Did five large HOSE stocks beat the VN30 ETF from 2024 to 2026?</span></li>
+        <li><a href="https://github.com/pn849222-hub/sql-query-portfolio">SQL query portfolio</a><span>Ten business questions answered in SQL.</span></li>
+        <li><a href="https://github.com/pn849222-hub/powerbi-dashboard">Power BI sales dashboard</a><span>Revenue, profit and growth across 9,994 retail orders.</span></li>
+        <li><a href="https://github.com/pn849222-hub/sales-data-analysis">Sales data analysis</a><span>The same retail data, explored in Python.</span></li>
+        <li><a href="https://github.com/pn849222-hub/auto-report-generator">Automatic sales report</a><span>A script that turns a CSV into a formatted PDF report.</span></li>
+        <li><a href="https://github.com/pn849222-hub/vietnam-stock-analysis">VN-Index 2020 to 2024</a><span>Price, volatility and trading volume.</span></li>
+        <li><a href="https://github.com/pn849222-hub/nginx-docker-ssl-sample">Nginx, Docker and HTTPS</a><span>A practice setup that redirects HTTP to HTTPS.</span></li>
+      </ul>
+    </section>
 
-      <section aria-labelledby="now">
+    <section class="now" aria-labelledby="now">
+      <div class="wrap">
         <h2 id="now">Now</h2>
-        <p>
-          In October 2026 I'm studying for the Google Analytics certification. From 6 to 12
-          November I'm taking part in MLH Global Hack Week: Builders Week. I'm open to freelance
-          work on APIs, data cleaning and dashboards.
-        </p>
-      </section>
+        <p>In October 2026 I'm studying for the Google Analytics certification. From 6 to 12 November I'm taking part in MLH Global Hack Week: Builders Week. I'm open to freelance work on APIs, data cleaning and dashboards.</p>
+      </div>
+    </section>
+  </main>
 
-      <section aria-labelledby="contact">
-        <h2 id="contact">Contact</h2>
-        <p>
-          Email is the fastest way to reach me:
-          <a href="mailto:pn849222@gmail.com">pn849222@gmail.com</a>. Tell me what you need
-          built and when you need it.
-        </p>
-      </section>
-    </main>
-
-    <footer>Updated 20 October 2026.</footer>
-  </div>
+  <footer class="contact">
+    <div class="wrap">
+      <p>Tell me what you need built.</p>
+      <a class="mail" href="mailto:pn849222@gmail.com">pn849222@gmail.com</a>
+      <p class="foot"><a href="https://github.com/pn849222-hub">GitHub</a><a href="Nguyen-Vu-Truong-Phuc-CV.pdf">CV (PDF)</a><span>Updated 20 October 2026.</span></p>
+    </div>
+  </footer>
+  <script src="motion.js"></script>
 </body>
 </html>
