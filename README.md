@@ -1,27 +1,18 @@
-# Portfolio
+# pn849222-hub.github.io
 
-Personal site for **Nguyen Vu Truong Phuc** — backend and data developer, co-founder of VANG LAI.
+Personal page of Nguyễn Vũ Trường Phúc (Ben), a backend and data developer in Ho Chi Minh
+City and co-founder of VANG LAI.
 
-Live files are static. Open `index.html` locally, or serve the folder with any web server / GitHub Pages.
+Live at https://pn849222-hub.github.io/
 
-## What this is
+## What's here
 
-A one-page portfolio for freelance and international clients:
+- `index.html`, `styles.css`: one static page. No JavaScript and no build step.
+- `assets/`: the photo, a chart from the job-market project, a Swagger screenshot of the
+  job-market API on demo data, and two screenshots of VANG LAI running locally on demo data.
+- `Nguyen-Vu-Truong-Phuc-CV.pdf`: the one-page CV.
 
-- VANG LAI, a community sports platform I co-founded (.NET 10, PostgreSQL, Redis, Blazor, React Native)
-- C# / .NET REST API (ASP.NET Core, Dapper, Docker, xUnit)
-- Data collection and analysis: a self-built dataset of 672 live job postings, with a
-  [live case study](https://pn849222-hub.github.io/vn-it-job-market/)
-- SQL, Power BI and Python analysis samples (public GitHub repos)
-- Servers, virtualization and networking: Linux, Proxmox VE, MikroTik
-- A one-page CV: `Nguyen-Vu-Truong-Phuc-CV.pdf`
+## Editing
 
-The four **sample labs** are practice environments, not client jobs.
-
-
-
-## GitHub Pages
-
-This repo is meant to be served from the `main` branch root (`/`). After Pages is on, the site is:
-
-`https://pn849222-hub.github.io/`
+Change the text in `index.html` and update the date in the footer. Images are WebP, sized
+for a 720 px column at 2x.
