@@ -24,4 +24,4 @@ The four **sample labs** are practice environments, not client jobs.
 
 This repo is meant to be served from the `main` branch root (`/`). After Pages is on, the site is:
 
-`https://pn849222-hub.github.io/it-support-portfolio/`
+`https://pn849222-hub.github.io/`
