@@ -76,6 +76,8 @@ tr.ours { background: var(--yellow); }
 .contact p { margin: 0 0 12px; font-size: 20px; }
 .mail { font-weight: 900; font-size: clamp(24px, 7.2vw, 84px); letter-spacing: -.035em; line-height: 1; color: var(--yellow); text-decoration: none; overflow-wrap: anywhere; }
 :focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+/* sections focused by the in-page links get no ring; the ring is for controls */
+[tabindex="-1"]:focus { outline: none; }
 .contact :focus-visible { outline-color: var(--yellow); }
 
 .more { padding-top: 120px; }
